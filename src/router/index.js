@@ -1,12 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '../components/HelloWorld'
-import Login from '../components/Login'
+import Login from '../views/Login'
 import AppIndex from '../components/home/AppIndex'
 import SuperIndex from '../components/SuperAdministrator/SuperIndex'
 import FYLHome from '../components/home/FYLHome'
 import FYLIndex from '../components/home/FYLIndex'
 import XYSHome from '../components/SuperAdministrator/admin/XYSHome'
+import FYLDiary from '../components/home/FYLDiary'
+import FYLSelf from '../components/home/FYLSelf'
+import FYLWechat from '../components/home/FYLWechat'
+import UserManagement from '../components/SuperAdministrator/admin/SysManagement/UserManagement'
 
 Vue.use(Router)
 
@@ -26,7 +30,31 @@ export default new Router({
         {
           path: '/fyl/xys/home',
           name: 'XYSHome',
-          component: XYSHome
+          component: XYSHome,
+          children: [
+            {
+              path: '/fyl/xys/userManage',
+              name: 'UserManagement',
+              component: UserManagement,
+              mate: {
+                requireAuth: true
+              }
+            }
+          ]
+        },
+        {
+          path: '/fyl/diary',
+          name: 'FYLDiary',
+          component: FYLDiary
+        },
+        {
+          path: '/fyl/self',
+          name: 'FYLSelf',
+          component: FYLSelf
+        }, {
+          path: '/fyl/wechat',
+          name: 'FYLWechat',
+          component: FYLWechat
         }
       ]
     },
@@ -35,8 +63,9 @@ export default new Router({
       name: 'HelloWorld',
       component: HelloWorld
     },
+
     {
-      path: '/login',
+      path: '',
       name: 'Login',
       component: Login
     }, {
