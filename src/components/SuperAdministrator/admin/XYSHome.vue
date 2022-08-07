@@ -5,8 +5,9 @@
         <switch></switch>
         <AdminMenu></AdminMenu>
       </el-aside>
+      <router-view></router-view>
+
     </el-container>
-    <router-view></router-view>
   </div>
 </template>
 

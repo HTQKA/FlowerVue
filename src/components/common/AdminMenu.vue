@@ -1,6 +1,7 @@
 <template>
   <el-menu
     class="categories"
+    router
     default-active="/fyl/xys/home"
     active-text-color="red"
     background-color="#FAFAFA"
