@@ -27,7 +27,7 @@
     </el-submenu>
 <!--    <a href="#nowhere" style="color: #222;float: right;padding: 20px;">更多功能</a>-->
     <i class="el-icon-menu" style="float: right;font-size: 40px;color: #222;padding-top: 8px"></i>
-    <span style="position: absolute;padding-top: 18px;right: 35%;font-size: 20px;font-weight: bold">Jasmine Flower Diary - 茉莉花日记</span>
+    <span style="position: absolute;padding-top: 18px;right: 35%;font-size: 20px;font-weight: bold">Jasmine Flower Diary</span>
   </el-menu>
 </template>
 

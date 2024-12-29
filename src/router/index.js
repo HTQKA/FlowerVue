@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '../components/HelloWorld'
-import Login from '../views/Login'
+import Login from '../components/Login'
 import AppIndex from '../components/home/AppIndex'
 import SuperIndex from '../components/SuperAdministrator/SuperIndex'
 import FYLHome from '../components/home/FYLHome'
@@ -80,6 +80,11 @@ export default new Router({
       path: '/superIndex',
       name: 'SuperIndex',
       component: SuperIndex
+    },
+    {
+      path: '/UserManagement',
+      name: 'UserManagement',
+      component: UserManagement
     }
   ]
 })
